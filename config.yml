@@ -1,0 +1,20 @@
+title: 'https://www.gevezeler.net'
+description: >-
+  <a href="https://www.gevezeler.net/">Sohbet</a> Sınırsız sohbet ve chat
+  dünyasına hoş geldin! Türkiye'nin en ünlü gevezelerini bir çatı altında
+  topladık. Eğer söyleyecek bir sözün varsa ve gevezelik yapacak yer arıyorsan
+  hemen içeri gir. Sohbet odalarında
+template:
+  repo: 'https:www.gevezeler.net-template'
+  name: 'https:www.gevezeler.net'
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
